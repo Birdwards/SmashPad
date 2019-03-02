@@ -7,7 +7,7 @@ All files in Super Smash Bros. Ultimate are compressed using the zstd format. An
 ## Requirements
 
 - [Python 3](https://www.python.org/) (or Python 2.7)
-- [zstandard Python library](https://pypi.org/project/zstandard/) (can by installed with `pip install zstandard`; if you don't have pip, see [here](https://pip.pypa.io/en/stable/installing/))
+- [zstandard Python library](https://pypi.org/project/zstandard/) (can be installed with `pip install zstandard`; if you don't have pip, see [here](https://pip.pypa.io/en/stable/installing/))
 - [CrossArc](https://github.com/Ploaj/ArcCross/) with updated hashes.txt from [here](https://github.com/ultimate-research/archive-hashes/)
 
 ## Instructions
