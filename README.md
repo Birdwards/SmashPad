@@ -1,5 +1,6 @@
 # SmashPad
 Tool to compress and pad SSBU mods to the correct file size
+by Birdwards and NyxTheShield
 
 All files in Super Smash Bros. Ultimate are compressed using the zstd format. Any modded files need to be compressed to the same exact size as the game's original compressed file. This Python script can do that for you.
 
