@@ -46,6 +46,10 @@ elif fhd >= 128:
     start_index = 9
 elif fhd >= 64:
     start_index = 7
+    
+# Handle edge case for large files with Single_Segment_Flag unset
+if start_index > 6 and fhd % 64 < 32:
+    start_index += 1
 
 # Dictionary_ID_Flag also affects Frame_Header length. I think this is always 0 by default, but I'm including it just in case
 if fhd % 4 == 1:
