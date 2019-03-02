@@ -18,6 +18,6 @@ All files in Super Smash Bros. Ultimate are compressed using the zstd format. An
 5. In Command Prompt (Windows) or Terminal (macOS), navigate to the folder containing smashpad.py, then type the following:
    - `python smashpad.py [input] [size]`
    - Replace `[input]` with the name of the modded file (or the path to the file if it's not in the same folder).
-   - Replace `[size]` with the comp size of the file as shown in CrossArc (see step 3).
+   - Replace `[size]` with the comp size of the file as shown in CrossArc (see step 3). Enter the comp size as you see it (in hexadecimal); don't convert it to a decimal number.
 6. Install the modded file using your preferred install tools.
 7. Have fun!
