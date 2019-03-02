@@ -5,7 +5,7 @@ import sys
 import zstandard as zstd
 
 if len(sys.argv) != 3:
-    sys.exit("Error: Wrong number of arguments\n\nHow to use this tool:\npython smashpad.py [input] [size]\n[input] = Name of the file to compress and/or pad\n[size] = Desired size of the compressed file, in hexadecimal\n\nExample:\npython smashpad.py ui_spirits_battle_db.prc 0x140CD")
+    sys.exit("Error: Wrong number of arguments\n\nHow to use this tool:\npython smashpad.py [input] [size]\n[input] = Name of the file to be compressed\n[size] = Desired size of the compressed file, in hexadecimal\n\nExample:\npython smashpad.py ui_spirits_battle_db.prc 0x140CD")
 
 uncomp_file = open(sys.argv[1] , 'rb').read()
 target_size = int(sys.argv[2], 16)
