@@ -80,15 +80,17 @@ def comp(input_name, output_name, target_size):
     print("File successfully padded to " + hex(target_size) + " bytes!")
 
 def decomp(input_name, output_name):
-    input = open(input_name, 'rb').read()
+    o = open(output_name, 'w+b')
+    i = open(input_name, 'rb').read()
     dctx = zstd.ZstdDecompressor()
-    original = dctx.decompress(input)
     
-    output = open(output_name, 'w+b')
-    output.write(original)
-    output.close()
+    for chunk in dctx.read_to_iter(i):
+        o.write(chunk)
     
-    print("File successfully decompressed to " + hex(len(original)) + " bytes!")
+    n = o.tell()
+    o.close()
+    
+    print("File successfully decompressed to " + hex(n) + " bytes!")
 
 howto = "How to use this tool:\npython smashpad.py [input] [size] [output]\n[input] = Name of the file to be compressed/decompressed\n[size] = (if compressing) Desired size of the compressed file, in hexadecimal\n(if decompressing, just type \"decomp\" instead of [size])\n[output] = (optional) New name for the compressed/decompressed file\n\nExamples:\npython smashpad.py ui_spirits_battle_db.prc 0x140CD 0x103B7D0B8.prc\npython smashpad.py 0x103B7D0B8.prc decomp spirit_battles.prc"
 
